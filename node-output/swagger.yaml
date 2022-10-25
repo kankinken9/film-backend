@@ -1,0 +1,17 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "Film-backend",
+    "description" : "",
+    "version" : "1.0"
+  },
+  "servers" : [ {
+    "url" : "https://virtserver.swaggerhub.com/kankinken9/Film-shape/1.0",
+    "description" : "SwaggerHub API Auto Mocking"
+  }, {
+    "url" : "https://film-backend.kankinken9.repl.co/",
+    "description" : "SwaggerHub API Auto Mocking"
+  } ],
+  "paths" : { },
+  "components" : { }
+}
