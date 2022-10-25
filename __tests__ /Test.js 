@@ -1,0 +1,36 @@
+const {validateArticle} = require('../controllers/validation');
+const auth = require('../controllers/auth');
+const can = require('../permissions/users');
+const Router = require('koa-router')
+const bodyParser = require('koa-bodyparser')
+const model = require('../models/users')
+
+
+const request = require('supertest')
+const app = require('../app')
+
+
+describe('Post new user', () =>{
+ it('should create a new user', async () => {
+    const res = await request(app.callback()).post('/api/v1/users').send({
+      username:'test',
+      password: '123123',
+      email : 'aaa@bbb.com'
+      
+    })
+ expect(res.status).toEqual(201)
+ })  
+});
+
+
+describe('Post new film', () =>{
+ it('should create a new film', async () => {
+    const res = await request(app.callback()).post('/api/v1/articles').send({
+      title:'Film test',
+      alltext: 'test text',
+      summary : 'summary',
+      authorid: '1'
+    })
+ expect(res.status).toEqual(201)
+ })  
+});
